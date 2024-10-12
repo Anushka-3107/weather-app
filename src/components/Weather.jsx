@@ -13,7 +13,7 @@ const Weather = () => {
   const API_KEY = "9f939a64d5e157faa014c84073b8a07d";
 
   const [weatherData, setWeatherData] = useState(null);
-  const [location, setLocation] = useState('USA');
+  const [location, setLocation] = useState(null);
   const [weatherImage, setWeatherImage] = useState(cloudy);
   
   
@@ -22,6 +22,11 @@ const Weather = () => {
       const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`
       );
+
+
+      if(!response.ok){
+        throw new Error('Network response was not ok')
+      }
       const data = await response.json();
       console.log(data);
       setWeatherData(data);
@@ -46,10 +51,13 @@ const Weather = () => {
       case 'Misty':
         setWeatherImage(misty);
         break;
+        case 'Haze':
+          setWeatherImage(misty);
+          break;
       case 'Fog':
         setWeatherImage(misty);
         break;
-      case 'Rainy':
+      case 'Rain':
         setWeatherImage(rainy);
         break;
       case 'Snow':
