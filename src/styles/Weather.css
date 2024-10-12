@@ -108,3 +108,59 @@
 .humid span, .wind span {
     font-size: 16px;
 }
+
+
+
+/* responsize styles */
+
+@media screen and (max-width: 768px){
+    .weather-box{
+        width: 90%;
+    }
+
+    .weather-details p{
+        font-size: 15px;
+    }
+
+    .weather-data div p{
+        font-size: 16px;
+    }
+
+    .weather-data div span{
+        font-size: 10px;
+    }
+
+    .weather-data div i{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .weather-box{
+        padding: 15px;
+    }
+
+    .search-bar input{
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .weather-details img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .weather-details p{
+        font-size: 16px;
+    }
+
+    .weather-data div p{
+        font-size: 14px;
+    }
+
+    .weather-data div i{
+        font-size: 20px;
+    }
+
+
+}

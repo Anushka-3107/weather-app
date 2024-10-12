@@ -60,6 +60,9 @@ const Weather = () => {
       case 'Rain':
         setWeatherImage(rainy);
         break;
+        case 'Drizzle':
+          setWeatherImage(rainy);
+          break;
       case 'Snow':
         setWeatherImage(snow);
         break;
