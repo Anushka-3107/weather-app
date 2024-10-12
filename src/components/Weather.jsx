@@ -78,6 +78,7 @@ const Weather = () => {
   return (
     <div className="weather">
       <div className="weather-box">
+      <h1>Weather App </h1>
         <div className="search-bar">
           <input
             type="text"
